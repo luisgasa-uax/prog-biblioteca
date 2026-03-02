@@ -1,3 +1,15 @@
+/**
+ * Representa un libro dentro del catálogo de una biblioteca.
+ *
+ * Cada libro está identificado de manera única mediante un {@code id}
+ * y contiene información básica como título, autor y número de páginas.
+ *
+ * Esta clase actúa como entidad del dominio y encapsula sus datos,
+ * permitiendo el acceso únicamente a través de métodos públicos.
+ *
+ * @author Luis García Sánchez
+ * @version 1.0
+ */
 public class Libro {
 
     // atributos de la clase
@@ -7,7 +19,7 @@ public class Libro {
     private int numPaginas;
 
     /**
-     * Metodo constructor de Libros
+     * Metodo constructor de objetos tipo {@code Libro}
      * @param id identificador del libro
      * @param titulo título del libro
      * @param autor autor del libro
@@ -40,14 +52,26 @@ public class Libro {
         return titulo;
     }
 
+    /**
+     * Devuelve el autor del libro
+     * @return el autor del libro
+     */
     public String getAutor(){
         return autor;
     }
-
+    /**
+     * Devuelve el número de páginas del libro
+     * @return el número de páginas del libro
+     */
     public int getNumPaginas(){
         return numPaginas;
     }
 
+    /**
+     * Devuelve una representación textual del libro con todos sus atributos.
+     *
+     * @return cadena de texto formateada con la información del libro.
+     */
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Libro: {");
