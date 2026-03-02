@@ -27,6 +27,24 @@ public class Biblioteca {
         return libroEncontrado;
     }
 
+    /**
+     * Metodo privado que busca la primera posición libre en el cátalogo
+     * @return -1 si no hay hueco libre o la posición libre.
+     */
+    private int buscarPrimerHuecoLibre(){
+        int posicionLibre = -1;
+        boolean seguirBuscando = true;
+
+        for (int i = 0; i < CANT_MAX_LIBROS && seguirBuscando; i++) {
+            if( catalogo[i] == null ){
+                posicionLibre = i;
+                seguirBuscando = false;
+            }
+        }
+
+        return posicionLibre;
+    }
+
 
 
 
